@@ -24,6 +24,7 @@ group :development, :test do
   gem 'guard-rspec', '2.1.1'
   gem 'guard-spork', '1.2.3'
   gem 'spork', '1.0.0rc3'
+  gem 'wdm', '~>0.0.3'
 end
 
 group :development do
@@ -31,7 +32,7 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '2.0.0beta4'
+  gem 'capybara', '1.1.3'
   gem 'factory_girl_rails', '4.1.0'
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', '0.9.1'

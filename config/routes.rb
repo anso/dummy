@@ -1,11 +1,12 @@
 Dummy::Application.routes.draw do
-  get "micropost/create"
-
-  get "micropost/destroy"
-
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   root to: 'static_pages#home'
 
